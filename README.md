@@ -9,3 +9,4 @@ Redux tutorial
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236202786-fb083907-e693-4d67-85d6-938be33d0d70.jpeg)
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236203146-e5c9c88a-7b24-4612-bd58-b23bbae334e0.jpeg)
 <img width="838" alt="Screenshot 2023-05-04 at 6 12 30 PM" src="https://user-images.githubusercontent.com/108695777/236207978-c00a4cb9-ec02-4749-9ec6-6ccb6eb8a29a.png">
+![Three Core Concepts contd](https://user-images.githubusercontent.com/108695777/236218140-4676ac68-f55b-471b-aea0-a4dfad3b9407.jpeg)

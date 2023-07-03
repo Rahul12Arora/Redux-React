@@ -41,7 +41,7 @@ Reducers takes a store & an action as an argument & returns the updated store ba
 let id = 0;
 
 
-function reducer(store,action){
+function reducer(store = [],action){
 
 if(action.type === 'BugAdded'){
 return [

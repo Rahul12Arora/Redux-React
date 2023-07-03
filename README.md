@@ -3,9 +3,49 @@ Redux tutorial
 
 •To share data between siblings, you have to lift state up in react tree to a common parent & then do prop drilling to pass data to childrens that want to share it.
 
+<h3>basics</h3>
 Every store has multiple slices,
 each slice may have multiple actions,
 one reducer may handle mutiple actions for a slice
+
+<h3>Actions</h3>
+Action is an object that contains type and payload.
+
+```
+{
+type:"BugAdded",
+payload:{
+description:"Bug in UI"
+}
+```
+
+<h3>Reducer</h3>
+
+Reducer is a function that updates the store based on action
+
+Reducers takes a store & an action as an argument & returns the updated store based on that
+
+```
+let id = 0;
+function reducer(store,action){
+if(action.type === 'BugAdded'){
+return [
+...store,
+    {
+      id:++id,
+      description:action.payload.id,
+      resolved:false,
+    }
+      ]
+}
+
+else if(action.type === "BugRemoved"){
+ return state.filter(bug => bug.id!==action.payload.id)
+}
+
+return state,
+```
+
 ![State in a React App](https://user-images.githubusercontent.com/108695777/236199426-3b3d367a-eea8-4f2c-ac94-d85b2818e7fa.jpeg)
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236202578-84e11fc4-53c4-479e-a3ce-a4c0efb1ec03.jpeg)
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236202786-fb083907-e693-4d67-85d6-938be33d0d70.jpeg)

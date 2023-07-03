@@ -79,6 +79,65 @@ function bugAdded(bugdescription){
 store.dispatch(bugAdded('bug1'));
 store.dispatch(bugRemoved(1));
 ```
+
+<h3>Example code</h3>
+```
+import Redux from "redux";
+//Actions
+
+const newBooking = (bookingName, amount) => {
+  return {
+    type: "NEW_BOOKING",
+    payload: {
+      name: bookingName,
+      amount: amount
+    }
+  };
+};
+
+const cancelBooking = (bookingName, refundAmount) => {
+  return {
+    type: "CANCEL_BOOKING",
+    payload: {
+      name: bookingName,
+      refundAmount: refundAmount
+    }
+  };
+};
+
+//Reducers
+
+const reservationHistory = (oldReservationList = [], action) => {
+  if (action.type === "NEW_BOOKING") {
+    return [...oldReservationList, action.payload];
+  } else if (action.type === "CANCEL_BOOKING") {
+    return oldReservationList.filter(
+      (item) => item.name !== action.payload.name
+    );
+  }
+
+  return oldReservationList;
+};
+
+const cancellationHistory = (oldcancellationList = [], action) => {
+  if (action.type === "CANCEL_BOOKING") {
+    return [...oldcancellationList, action.payload];
+  }
+
+  return oldcancellationList;
+};
+
+const accounting = (totalmoney = 0, action) => {
+  if (action.type === "NEW_BOOKING") {
+    return totalmoney + action.payload.amount;
+  } else if (action.type === "CANCEL_BOOKING") {
+    return totalmoney - action.payload.amount;
+  }
+  return totalmoney;
+};
+
+console.log(redux);
+```
 <img width="592" alt="Screenshot 2023-07-03 at 3 06 37 PM" src="https://github.com/Rahul12Arora/Redux-React/assets/108695777/98f025f1-bff6-4aa9-ba90-68867198f69d">
 
 ![State in a React App](https://user-images.githubusercontent.com/108695777/236199426-3b3d367a-eea8-4f2c-ac94-d85b2818e7fa.jpeg)

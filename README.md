@@ -4,9 +4,11 @@ Redux tutorial
 •To share data between siblings, you have to lift state up in react tree to a common parent & then do prop drilling to pass data to childrens that want to share it.
 
 <h3>basics</h3>
-Every store has multiple slices,
-each slice may have multiple actions,
-one reducer may handle mutiple actions for a slice
+Every store has multiple slices,</br>
+each slice may have multiple actions,</br>
+one reducer may handle mutiple actions for a slice</br>
+
+**we can combine multiple reducers in an object and pass them in the createStrore() function**
 
 <h3>Store</h3>
 Store is the single source of truth, we will create and export it.

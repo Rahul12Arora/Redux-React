@@ -63,6 +63,21 @@ return state,
 export default reducer
 ```
 
+<h3>Dispathing actions</h3>
+
+```
+
+function bugAdded(bugdescription){
+    return {
+    type: "BugAdded",
+    payload: {description: bugdescription}
+}
+}
+
+store.dispatch(bugAdded('bug1'));
+store.dispatch(bugRemoved(1));
+```
+
 ![State in a React App](https://user-images.githubusercontent.com/108695777/236199426-3b3d367a-eea8-4f2c-ac94-d85b2818e7fa.jpeg)
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236202578-84e11fc4-53c4-479e-a3ce-a4c0efb1ec03.jpeg)
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236202786-fb083907-e693-4d67-85d6-938be33d0d70.jpeg)

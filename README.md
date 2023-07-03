@@ -8,6 +8,18 @@ Every store has multiple slices,
 each slice may have multiple actions,
 one reducer may handle mutiple actions for a slice
 
+<h3>Store</h3>
+Store is the single source of truth, we will create and export it.
+
+```
+import {createStore} from 'redux';
+import reducer from './reducer';      //importing reducer function
+
+const store = createStore(reducer);
+
+export default store;
+```
+    
 <h3>Actions</h3>
 Action is an object that contains type and payload.
 
@@ -27,7 +39,10 @@ Reducers takes a store & an action as an argument & returns the updated store ba
 
 ```
 let id = 0;
+
+
 function reducer(store,action){
+
 if(action.type === 'BugAdded'){
 return [
 ...store,
@@ -44,6 +59,8 @@ else if(action.type === "BugRemoved"){
 }
 
 return state,
+
+export default reducer
 ```
 
 ![State in a React App](https://user-images.githubusercontent.com/108695777/236199426-3b3d367a-eea8-4f2c-ac94-d85b2818e7fa.jpeg)

@@ -79,6 +79,7 @@ function bugAdded(bugdescription){
 store.dispatch(bugAdded('bug1'));
 store.dispatch(bugRemoved(1));
 ```
+<img width="592" alt="Screenshot 2023-07-03 at 3 06 37 PM" src="https://github.com/Rahul12Arora/Redux-React/assets/108695777/98f025f1-bff6-4aa9-ba90-68867198f69d">
 
 ![State in a React App](https://user-images.githubusercontent.com/108695777/236199426-3b3d367a-eea8-4f2c-ac94-d85b2818e7fa.jpeg)
 ![Redux-1](https://user-images.githubusercontent.com/108695777/236202578-84e11fc4-53c4-479e-a3ce-a4c0efb1ec03.jpeg)
